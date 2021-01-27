@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <script src="scripts/react/react.production.min.js"></script>
+        <script src="scripts/react-dom/react-dom.production.min.js"></script>
+        <script src="scripts/react-dom/react-dom-server.browser.production.min.js"></script>
+        <script src="scripts/react-dom/react-dom-unstable-native-dependencies.production.min.js"></script>
+        <script>
+        (() => {
+            const libraryURL = new URL(new URLSearchParams(location.search).get("libraryURL") || "/node_modules/framer/build/framer.debug.js", location.href)
+            const supportedOrigins = new Set([location.origin, "https://development.framerusercontent.com", "https://framerusercontent.com"])
+            if (!(supportedOrigins.has(libraryURL.origin) || libraryURL.origin.startsWith("http://127.0.0.1:"))) throw new Error("Unable to load libraryURL from origin: " + libraryURL.origin)
+            document.write('<script src="' + libraryURL.toString() + '"><\/script>')
+        })()
+        </script>
+
+        <link href="styles/Draft.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/preview-next-export-styles.linaria.css" rel="stylesheet" />
+        <link href="fonts/inter/inter.css" rel="stylesheet" />
+
+        <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+            }
+
+            html, body, main {
+                height: 100%;
+            }
+
+            @font-face {
+                font-family: "Input Mono";
+                font-style: normal;
+                font-weight: 400;
+                src: local("Input Mono"), url("fonts/QbHJVUjy6YgY.app.ttf") format("truetype");
+            }
+
+            .framerInternalUI-componentPlaceholder {
+                border-color: rgba(175, 125, 255);
+                background-color: rgba(163, 113, 255);
+                color: rgb(136, 85, 255);
+            }
+
+            .framerInternalUI-errorPlaceholder {
+                border-style: solid;
+                border-color: rgb(246, 193, 204);
+                background-color: rgb(242, 219, 224);
+                color: rgb(255, 0, 85);
+            }
+        </style>
+    </head>
+
+    <body>
+        <main></main>
+        <script src="scripts/preview-next-export.js" type="text/javascript"></script>
+    </body>
+</html>

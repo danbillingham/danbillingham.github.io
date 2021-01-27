@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon / toggle / star_12</title>
+    <defs>
+        <polygon id="path-1" points="8 12.216 12.944 15.2 11.632 9.576 16 5.792 10.248 5.304 8 0 5.752 5.304 0 5.792 4.368 9.576 3.056 15.2"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card-/-245-Partner-4-/-Foot-Live" transform="translate(-214.000000, -11.000000)">
+            <g id="Group" transform="translate(214.000000, 11.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="-↳Color" fill="#FECB00" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
